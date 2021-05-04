@@ -6,4 +6,5 @@ int main(){
   this is my hot test;
   this is a push test;
   this is a pull test;
+  this is a new test;
 }
