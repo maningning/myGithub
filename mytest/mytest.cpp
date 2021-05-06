@@ -1,10 +1,10 @@
-#include<>
+#include<iostream>
+#include"complex.h"
+
+using namespace std;
+
 int main(){
-  this is a test;
-  this is a test;
-  this is my master;
-  this is my hot test;
-  this is a push test;
-  this is a pull test;
-  this is a new test;
+  complex c1(2, 1);
+  complex c2(4, 0);
+  cout << "hello_world" << endl;
 }
