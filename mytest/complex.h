@@ -22,4 +22,4 @@ class complex
   friend complex&__doapl(complex*, const complex&);
 };
 
-#endif //MYGITHUB_MYTEST_COMPLEX_H_
+#endif //__complex__
