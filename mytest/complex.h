@@ -19,7 +19,18 @@ class complex
     }
  private:
     double re, im;
-    //friend complex&__doapl(complex*, const complex&);
+    friend complex&__doapl(complex*, const complex&);
 };
 
+inline complex&
+__doapl(complex* ths, const complex& r){
+  ths -> re += r.re;
+  ths -> im += r.im;
+  return *ths
+}
+
+inline complex&
+complex::operator+=(const complex &) {
+  return __doapl(this, r)
+}
 #endif //__complex__
