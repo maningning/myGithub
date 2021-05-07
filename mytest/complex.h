@@ -4,7 +4,6 @@
 
 #ifndef __COMPLEX__
 #define __COMPLEX__
-#include <iostream.h>
 #include <cmath>
 
 class complex
@@ -28,32 +27,32 @@ inline complex&
 __doapl(complex* ths, const complex& r){
   ths -> re += r.re;
   ths -> im += r.im;
-  return *ths
+  return *ths;
 }
 // member function
 inline complex&
 complex::operator += (const complex& r) {
-  return __doapl(this, r)
+  return __doapl(this, r);
 }
 
 // Non-member function
-inline complex
-operator + (const complex& x, const complex& y){
-  retrun complex(real(x) + real(y), imag(x) + imag(y));
-}
-
-inline complex
-operator + (const double x, const complex& y){
-  retrun complex(x + real(y), imag(y));
-}
-
-inline complex
-operator + (const complex& x, const double y){
-  retrun complex(real(x) + y, imag(x));
-}
-
-ostream&
-operator << (ostream& os, const complex& x){
-  return os << '(' << real(x) << ',' <<imag(x) <<')';
-}
+//inline complex
+//operator + (const complex& x, const complex& y){
+//  return complex(real(x) + real(y), imag(x) + imag(y));
+//}
+//
+//inline complex
+//operator + (const double x, const complex& y){
+//  return complex(x + real(y), imag(y));
+//}
+//
+//inline complex
+//operator + (const complex& x, const double y){
+//  return complex(real(x) + y, imag(x));
+//}
+//
+//ostream&
+//operator << (ostream& os, const complex& x){
+//  return os << '(' << real(x) << ',' <<imag(x) <<')';
+//}
 #endif //__complex__
