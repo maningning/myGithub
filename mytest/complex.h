@@ -46,7 +46,6 @@ imag (const complex& x) {
   return x.imag ();
 }
 
-
 inline complex
 operator + (const complex& x, const complex& y){
   return complex(real(x) + real(y), imag(x) + imag(y));
@@ -64,6 +63,6 @@ operator + (const complex& x, const double y){
 
 std::ostream&
 operator << (std::ostream& os, const complex& x){
-  return os << '(' << real(x) << ',' <<imag(x) <<')';
+  return os << '(' << real(x) << ',' << imag(x) <<')';
 }
 #endif //__complex__
