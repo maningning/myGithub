@@ -4,6 +4,7 @@
 
 #ifndef __COMPLEX__
 #define __COMPLEX__
+
 #include <cmath>
 class complex
 {
@@ -33,4 +34,22 @@ inline complex&
 complex::operator += (const complex& r) {
   return __doapl(this, r)
 }
+
+// Non-member function
+inline complex
+operator + (const complex& x, const complex& y){
+  retrun complex(real(x) + real(y), imag(x) + imag(y));
+}
+
+inline complex
+operator + (const double x, const complex& y){
+  retrun complex(x + real(y), imag(y));
+}
+
+inline complex
+operator + (const complex& x, const double y){
+  retrun complex(real(x) + y, imag(x));
+}
+
+
 #endif //__complex__
