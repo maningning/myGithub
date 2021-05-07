@@ -4,8 +4,9 @@
 
 #ifndef __COMPLEX__
 #define __COMPLEX__
-
+#include <iostream.h>
 #include <cmath>
+
 class complex
 {
  public:
@@ -29,7 +30,7 @@ __doapl(complex* ths, const complex& r){
   ths -> im += r.im;
   return *ths
 }
-
+// member function
 inline complex&
 complex::operator += (const complex& r) {
   return __doapl(this, r)
@@ -51,5 +52,8 @@ operator + (const complex& x, const double y){
   retrun complex(real(x) + y, imag(x));
 }
 
-
+ostream&
+operator << (ostream& os, const complex& x){
+  return os << '(' << real(x) << ',' <<imag(x) <<')';
+}
 #endif //__complex__
